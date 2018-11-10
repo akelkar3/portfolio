@@ -1,21 +1,300 @@
-<!DOCTYPE html>
-<html>
-<head>
-<!-- HTML Codes by Quackit.com -->
-<title>
-</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {background-color:#ffffff;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
-h1{text-align:center;font-family:Impact, sans-serif;letter-spacing:3px;color:#000000;background-color:#ffffff;}
-p {font-family:Georgia, serif;font-size:14px;font-style:normal;font-weight:normal;color:#000000;background-color:#ffffff;}
-</style>
-</head>
-<body>
-<h1>I love you Jui </h1>
-  <div>
-    <div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/26BRv0ThflsHCqDrG" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/heart-teamo-team-o-26BRv0ThflsHCqDrG">via GIPHY</a></p>
-  </div
-    <p></p>
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Ankit Kelkar</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/dashboard.css">
+        <link rel="stylesheet" href="css/toastr.css">
+       
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+     
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+  <body>
+        <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark justify-content-between ">
+                <!-- Navbar content -->
+                
+                <a class="navbar-brand " href="#">Ankit Kelkar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class=" nav navbar-nav col-md-12 nav-fill  nav-pills" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link text-light active  " id="tech-tab" data-toggle="tab" href="#Technology" role="tab" aria-controls="tech" aria-selected="true">Technology</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link text-light" id="design-tab" data-toggle="tab" href="#design" role="tab" aria-controls="design" aria-selected="false">Design</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" id="drama-tab" data-toggle="tab" href="#drama" role="tab" aria-controls="drama" aria-selected="false">Drama</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light " id="film-tab" data-toggle="tab" href="#film" role="tab" aria-controls="film" aria-selected="false">Films</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  text-light " id="me-tab" data-toggle="tab" href="#me" role="tab" aria-controls="me" aria-selected="false">Contact</a>
+                  </li>
+                </ul>
+               </div>
+                
+              </nav>
+<div class="container">
+    <div class="tab-content  " id="myTabContent"  >
+        <div class="tab-pane fade show active" id="Technology" role="tabpanel" aria-labelledby="tech-tab">       <br><br><br>
+          <div class="container">
+                <div class="card text-center">
+                  <div class="card-header">
+                   Overview
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Student at University of North Carolina, Charlotte, NC </h5>
+                    <p class="card-text">I am actively seeking internship in data visualization / AR /VR or Computer Vision software development.</p>
+                    <button class="btn btn-lg btn-dark" data-bind="click:$root.downloadResume" ><span> Download resume &nbsp;&nbsp;<i class="material-icons">file_download</i></button>
+                   
+                  </div>
+                  
+                 
+                </div>
+                <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="modalBody" class="modal-body">
+       
+      </div>
+     
+    </div>
+  </div>
+</div>
+               <br>
+                <h3 >Projects</h3>
+                <hr>
+                <div class="">
+                <div class=" row ">
+                <div class="card text-white bg-info projects mb-3 mx-4 col-md-3 " data-bind="click:function(){$root.openModal(1);}" data-toggle="modal" data-target="#exampleModalCenter">
+                  <div class="card-header text-center">Business Portal</div>
+                  <div class="card-body">
+                    <h5 class="card-title">.Net full stack project</h5>
+                    <p class="card-text">HTML5, Knockout.Js, Jquery, JavaScript, Bootstrap, .Net, WebApi, WCF, SQL Server</p>
+                  </div>
+                </div>
+                <div class="card text-white bg-warning projects mb-3 mx-4 col-md-3"data-bind="click:function(){$root.openModal(2);}" data-toggle="modal" data-target="#exampleModalCenter" >
+                  <div class="card-header text-center">Visualization Project</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Data Visualization</h5>
+                    <p class="card-text">Unity 3d, Vuforia, Hololense</p>
+                  </div>
+                </div>
+                <div class="card text-white bg-primary projects mb-3 mx-4 col-md-3" data-bind="click:function(){$root.openModal(3);}" data-toggle="modal" data-target="#exampleModalCenter">
+                  <div class="card-header text-center">Visualization Project</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Architecture Visualization</h5>
+                    <p class="card-text">Unity 3d, Vuforia, android</p>
+                  </div>
+                </div>
+                <div class="card text-white bg-success projects mb-3 mx-4 col-md-3"data-bind="click:function(){$root.openModal(4);}" data-toggle="modal" data-target="#exampleModalCenter" >
+                  <div class="card-header text-center">Machine Vision Project</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Computer/Machine vision</h5>
+                    <p class="card-text">Linux, OpenCV, C++, BeagleBone</p>
+                  </div>
+                </div>
+                <div class="card text-white bg-info projects mb-3 mx-4 col-md-3" data-bind="click:function(){$root.openModal(5);}" data-toggle="modal" data-target="#exampleModalCenter">
+                  <div class="card-header text-center">Telecommunication Project</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Simulation of Dynamic Channel Allocation</h5>
+                    <p class="card-text">MATLAB, GSM Architecture</p>
+                  </div>
+                </div>
+            
+              <div class="card text-white bg-warning projects mb-3 mx-4 col-md-3" data-bind="click:function(){$root.openModal(6);}" data-toggle="modal" data-target="#exampleModalCenter">
+                <div class="card-header text-center">Web Project</div>
+                <div class="card-body">
+                  <h5 class="card-title">Roomies</h5>
+                  <p class="card-text">HTML5, Bootstrap, jQuery, Knockout Js, Node Js, My SQL</p>
+                </div>
+              </div>
+            </div>
+          </div>
+              <hr>
+                <div class="col-md-12 text-center">
+                  <blockquote class="blockquote  ">
+                      <p class="mb-0">Arise, awake and stop not till the goal is reached.</p>
+                      <footer class="blockquote-footer"> <cite title="Source Title">Swami Vivekanand</cite></footer>
+                    </blockquote></div>
+                 
+                        
+                       
+                       
+         
+            </div>
+            
+          </div>
+         
+        <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design-tab">
+         <br>
+         <br>
+         <br> 
+          <div class="card text-center">
+            <div class="card-header">
+              Overview
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Graphic Designer at University Recreation, University of North Carolina, Charlotte, NC </h5>
+              <p class="card-text">I am an experienced web media graphic desinger. My personal interest is in minimal poster designing and logo designing.</p>
+              <button class="btn btn-lg btn-dark" data-bind="click:$root.downloadGraphicResume" href="../docs/graphicsResume.docx"><span> Download resume &nbsp;&nbsp;<i class="material-icons">file_download</i></button>
+             
+            </div>
+            
+           
+          </div>
+          <hr>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" style="height:20%">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100 "  style="height: 30em"  src="design/1.png" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100"  style="height: 30em" src="design/7.jpeg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100"  style="height: 30em" src="design/10.png" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon  bg-dark" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon  bg-dark"  aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <hr> 
+              <div class="gal">
+                <img src="design/4.png" alt="Second slide">
+                <img src="design/2.png" alt="Second slide">
+                <img src="design/1.png" alt="Second slide">
+                <img src="design/3.png" alt="Second slide">
+              
+                <img src="design/5.png" alt="Second slide">
+                <img src="design/6.png" alt="Second slide">
+                <img src="design/7.jpeg" alt="Second slide">
+                <img src="design/8.jpeg" alt="Second slide">
+                <img src="design/9.png" alt="Second slide">
+                <img src="design/10.png" alt="Second slide">
+                <img src="design/11.jpeg" alt="Second slide">
+
+
+              </div>
+
+        </div>
+      
+        <div class="tab-pane fade" id="drama" role="tabpanel" aria-labelledby="drama-tab">
+            <br>
+            <br>
+            <br> 
+             <div class="card text-center">
+               <div class="card-header">
+                 Overview
+               </div>
+               <div class="card-body">
+                 <h5 class="card-title">Actor Director by Passion. </h5>
+                 <p class="card-text">I am a passionate drama theatre personal. I have performed and directed in various genre from comedy to gothic horror.</p>
+                 <button class="btn btn-lg btn-dark" data-bind="click:$root.downloadTheatreResume" href="../docs/graphicsResume.docx"><span> Download resume &nbsp;&nbsp;<i class="material-icons">file_download</i></button>
+                
+               </div>
+               
+              
+             </div>
+             
+
+           
+           
+        </div>
+        <div class="tab-pane fade" id="film" role="tabpanel" aria-labelledby="film-tab">
+            <div class="media">
+                <div class="media-body bgimg bgimgany">
+                <div class="text-center">  <br><br><h3 class="mt-2 mb-1 ">&nbsp; &nbsp; &nbsp; The Pretty Chaos</h3>
+                 <span class=" col-md-8">Performed a 25 years guy who gets into a discussion with friends over coffee table at a cafe. Please see the short film by Sanjana Shrouti to find out more.
+                 </span> <br><br><br><br><br><br><br><br></div></div>  
+                <iframe width="360" height="280" src="https://www.youtube.com/embed/xb9BFKagC3M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+              <div class="media">
+                  <iframe width="360" height="280" src="https://www.youtube.com/embed/nALfwFWF0iE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  <div class="media-body bgimg2 bgimgany">
+                  <div class="text-center">  <br><br><h3 class="mt-2 mb-1 ">&nbsp; &nbsp; &nbsp; Book a cab</h3>
+                   <span class=" col-md-8">Performed a junkie. who helps his cab driver friend in a night full of thriller. I personally love this movie, it challenged my acting skills to its boundries as the character demanded personality which is poles apart than mine. Please watch best of my works in film by Nishant Shrivastava.
+                   </span> <br><br><br><br><br><br><br><br></div></div>  
+                  
+                </div>
+                <div class="media">
+                <div class="media-body bgimg bgimgany">
+                  <div class="text-center">  <br><br><h3 class="mt-2 mb-1 ">&nbsp; &nbsp; &nbsp; Real Near</h3>
+                   <span class=" col-md-8">Created this film out of curiosity to explore the process of filmmaking. The concept was a social cause. Please watch and comment.
+                   </span> <br><br><br><br><br><br><br><br></div></div>  
+              
+                  <iframe width="360" height="280" src="https://www.youtube.com/embed/IwvpCX4IBgc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <br>
+                <a class="btn btn-danger pull-right" href="https://www.youtube.com/channel/UC_XpxldkfFu1ofJVd-3k_9g"><span class="h5">Visit my YouTube Channel</span>&nbsp;&nbsp;<span><i class="material-icons md-light">&#xE04A;</i></span></a>
+                
+        </div>
+        <div class="tab-pane fade" id="me" role="tabpanel" aria-labelledby="me-tab">
+          <div class="text-center">
+            <img  class=" h-75 w-75" src="images/aboutMe.png" alt="..."> 
+         
+          </div>
+          <div class="container" >
+          <div class="col-md-12 bg-dark text-center">
+              <ul class="social-network social-circle ">
+                  <li><a href="https://www.facebook.com/ankit.kelkar" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="https://www.instagram.com/ankitkelkar/" class="icoInstagram" title="Insta"><i class="fa fa-instagram"></i></a></li>
+               
+                  <li><a href="https://www.linkedin.com/in/ankitkelkar/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+              </ul>				
+           </div>
+          </div>
+        </div>
+     
+      </div>
+ 
+</div>
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.js" ></script>
+  
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <script src="js/ko.js"  ></script>
+<script src="js/dashboard.js"  ></script>
+<script src="js/toastr.js"  ></script>
+<br><br>
+<footer class="text-center">
+       
+  <span class="  col-md-3">Created by: Ankit Kelkar  </span>
+  <span class="col-md-3">Contact: <a href="mailto:akelkar3@uncc.edu">
+  akelkar3@uncc.edu</span>  
+</p>
+</footer>
 </body>
 </html>
