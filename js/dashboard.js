@@ -1,6 +1,43 @@
 // Here's my data model
 var ViewModel = function(first, last) {
   self=this;
+  
+  var data= [
+    {
+      title:"Product Visualization"
+      ,skills:"Unity3d, C#, Web Services, iOS, ARKit, Android, ARCore"
+      ,id:7
+    },
+    {
+      id:1,
+    title:"Business Portal"
+    ,skills:"HTML5, Knockout.Js, Jquery, JavaScript, Bootstrap, .Net, WebApi, WCF, SQL Server"
+  }
+  , {id:2,
+    title:"Data Visualization"
+    ,skills:"Unity 3d, Vuforia, Hololense"
+  }
+  , {id:3,
+    title:"Architecture Visualization"
+    ,skills:"Unity 3d, Vuforia, android"
+  }
+  , {id:4,
+    title:"Machine Vision Project"
+    ,skills:"Linux, OpenCV, C++, BeagleBone"
+  }
+  , {id:5,
+    title:"Telecommunication Project"
+    ,skills:"MATLAB, GSM Architecture"
+  }
+  , {id:6,
+    title:"Roomies"
+    ,skills:"HTML5, Bootstrap, jQuery, Knockout Js, Node Js, My SQL"
+  }
+  
+];
+
+self.projects = ko.observable(data);
+  
  self.downloadGraphicResume= function (params) {
    window.location="docs/graphicsResume.docx";
  }
@@ -8,10 +45,11 @@ self.downloadTheatreResume=function (params) {
   window.location="docs/theatreResume.docx";
 }
 self.downloadResume =function (params) {
-  window.location="docs/resume_new.pdf";
+  window.location="docs/AnkitKelkar.pdf";
 }
 
 self.openModal =function(project){
+  console.log(project);
 switch (project) {
   case 1:
   $('#modalTitle').text('Business Portal');
@@ -49,6 +87,12 @@ switch (project) {
    
  $('#modalBody').text('');
  $('#modalBody').append('<p>• Developed a point tracking system for household work distibution.	</p> <p>•	Designed UI for the webportal. </p> <p>• Implemented business logic and database using Node.Js and MySQL </p><p> <a href="http://roomies.gearhostpreview.com">click here to see demo.</a></p>');
+ break;
+ case 7:
+ $('#modalTitle').text('Product Visualization')
+   
+ $('#modalBody').text('');
+ $('#modalBody').append('<p>• Developing an Augmented Reality application for iOS/ Android/ MagicLeap	</p> <p>•	Rendering 3D objects through C# and web service integration. </p> <p>• Compared different technologies available for augmented reality. </p><p>• Implemented continuous integration continuous delivery through Jenkins</p><p> • Implemented MVC framework for Unity3D</p>');
  break;
   default:
     break;

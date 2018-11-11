@@ -80,17 +80,18 @@
 </div>
                <br>
                 <h3 >Projects</h3>
+                
                 <hr>
                 <div class="">
-                <div class=" row ">
-                <div class="card text-white bg-info projects mb-3 mx-4 col-md-3 " data-bind="click:function(){$root.openModal(1);}" data-toggle="modal" data-target="#exampleModalCenter">
-                  <div class="card-header text-center">Business Portal</div>
+                <div class=" row "  data-bind="foreach: $root.projects">
+                <div class="card text-white bg-info projects mb-3 mx-4 col-md-3 " data-bind="click:function(){$root.openModal(id);}" data-toggle="modal"  data-target="#exampleModalCenter">
+                  <div class="card-header text-center" data-bind="text: title">Business Portal</div>
                   <div class="card-body">
-                    <h5 class="card-title">.Net full stack project</h5>
-                    <p class="card-text">HTML5, Knockout.Js, Jquery, JavaScript, Bootstrap, .Net, WebApi, WCF, SQL Server</p>
+                    <h5 class="card-title" >Technologies used</h5>
+                    <p class="card-text" data-bind="text:skills">HTML5, Knockout.Js, Jquery, JavaScript, Bootstrap, .Net, WebApi, WCF, SQL Server</p>
                   </div>
                 </div>
-                <div class="card text-white bg-warning projects mb-3 mx-4 col-md-3"data-bind="click:function(){$root.openModal(2);}" data-toggle="modal" data-target="#exampleModalCenter" >
+                <!-- <div class="card text-white bg-warning projects mb-3 mx-4 col-md-3"data-bind="click:function(){$root.openModal(2);}" data-toggle="modal" data-target="#exampleModalCenter" >
                   <div class="card-header text-center">Visualization Project</div>
                   <div class="card-body">
                     <h5 class="card-title">Data Visualization</h5>
@@ -125,7 +126,7 @@
                   <h5 class="card-title">Roomies</h5>
                   <p class="card-text">HTML5, Bootstrap, jQuery, Knockout Js, Node Js, My SQL</p>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
               <hr>
