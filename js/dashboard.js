@@ -43,7 +43,7 @@ var ViewModel = function(first, last) {
   
 ];
 
- var str= "C#, C++, Java, Python, JavaScript, Swift 4.0, Visual Studio, Unity 3D, OpenGL, OpenCV, Android Studio, Eclipse, Xamarin, MATLAB 7.7, XCode, Vuforia, AR Core, AR Kit ,.NET MVC, SQL Server 2012 MVVM, Bootstrap, CSS, NodeJS, MongoDB, ExpressJS, AngularJS"
+ var str= "C#, C++, Java, Python, JavaScript, Swift 4.0, Visual Studio, Unity 3D, OpenGL, OpenCV, Android Studio, Eclipse, Xamarin, MATLAB, XCode, Vuforia, AR Core, AR Kit ,.NET MVC, SQL Server 2012, MVVM, Bootstrap, CSS, NodeJS, MongoDB, ExpressJS, AngularJS"
  var skilldata= str.split(',');
 self.projects = ko.observableArray(data);
 self.skills= ko.observableArray(skilldata);

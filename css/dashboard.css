@@ -10,11 +10,15 @@
 }
 .skill-effect p{
 	transition: all .3s ease-in-out;
+	border:2px solid #363636;
+	font-size: 0.7em;
 	color: black
 }
 .skill-effect p:hover{
 	transform: scale(1.5);
-	color:#00295e;
+	background:#242424;
+	color:#fff;
+
 }
 .bgimgany { 
     /* The image used */
