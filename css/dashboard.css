@@ -1,3 +1,21 @@
+
+.font-1{
+	font-family: 'Indie Flower', cursive;
+	
+
+}
+.font-2{
+	font-family: 'Carter One', cursive;
+	
+}
+.skill-effect p{
+	transition: all .3s ease-in-out;
+	color: black
+}
+.skill-effect p:hover{
+	transform: scale(1.5);
+	color:#00295e;
+}
 .bgimgany { 
     /* The image used */
    
@@ -15,6 +33,9 @@
 }
 .bgimg2 {
     background-image: url('../images/film2.png');
+}
+.bg-teal {
+	background-color:#5874AA;
 }
 .gal {
 	
@@ -79,7 +100,7 @@ ul.social-network li {
 }
 .social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
 .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
-	color:#fff;
+	color:rgb(54, 54, 54);
 }
 a.socialIcon:hover, .socialHoverClass {
 	color:#44BCDD;
@@ -129,7 +150,7 @@ a {
 .projects:hover {
 	transition: 400ms ease ; /* delays for 1 second */
 -webkit-transition: 400ms ease; /* for Safari & Chrome */
-	-moz-box-shadow: 7px 7px 7px rgba(54, 54, 54, 0.479); 
-	-webkit-box-shadow: 7px 7px 7px rgba(54, 54, 54, 0.479); 
-	box-shadow:  7px 7px 7px  rgba(54, 54, 54, 0.479); 
+	-moz-box-shadow: 9px 9px 9px rgba(54, 54, 54, 0.479); 
+	-webkit-box-shadow: 9px 9px 9px rgba(54, 54, 54, 0.479); 
+	box-shadow:  9px 9px 9px  rgba(54, 54, 54, 0.479); 
  }

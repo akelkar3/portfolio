@@ -7,36 +7,46 @@ var ViewModel = function(first, last) {
       title:"Product Visualization"
       ,skills:"Unity3d, C#, Web Services, iOS, ARKit, Android, ARCore"
       ,id:7
+      ,image:''
     },
     {
       id:1,
     title:"Business Portal"
     ,skills:"HTML5, Knockout.Js, Jquery, JavaScript, Bootstrap, .Net, WebApi, WCF, SQL Server"
+    ,image:''
   }
   , {id:2,
     title:"Data Visualization"
     ,skills:"Unity 3d, Vuforia, Hololense"
+    ,image:''
   }
   , {id:3,
     title:"Architecture Visualization"
     ,skills:"Unity 3d, Vuforia, android"
+    ,image:''
   }
   , {id:4,
     title:"Machine Vision Project"
     ,skills:"Linux, OpenCV, C++, BeagleBone"
+    ,image:''
   }
   , {id:5,
     title:"Telecommunication Project"
     ,skills:"MATLAB, GSM Architecture"
+    ,image:''
   }
   , {id:6,
     title:"Roomies"
     ,skills:"HTML5, Bootstrap, jQuery, Knockout Js, Node Js, My SQL"
+    ,image:''
   }
   
 ];
 
-self.projects = ko.observable(data);
+ var str= "C#, C++, Java, Python, JavaScript, Swift 4.0, Visual Studio, Unity 3D, OpenGL, OpenCV, Android Studio, Eclipse, Xamarin, MATLAB 7.7, XCode, Vuforia, AR Core, AR Kit ,.NET MVC, SQL Server 2012 MVVM, Bootstrap, CSS, NodeJS, MongoDB, ExpressJS, AngularJS"
+ var skilldata= str.split(',');
+self.projects = ko.observableArray(data);
+self.skills= ko.observableArray(skilldata);
   
  self.downloadGraphicResume= function (params) {
    window.location="docs/graphicsResume.docx";

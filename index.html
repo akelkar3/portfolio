@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="css/dashboard.css">
         <link rel="stylesheet" href="css/toastr.css">
+        <link rel="stylesheet" href="css/particle.css">
+    
        
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -14,19 +16,24 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Carter+One&effect=anaglyph" rel="stylesheet">
     </head>
   <body>
         <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark justify-content-between ">
                 <!-- Navbar content -->
                 
-                <a class="navbar-brand " href="#">Ankit Kelkar</a>
+                <a class="navbar-brand "data-toggle="tab"  href="#Home">Ankit Kelkar</a>
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class=" nav navbar-nav col-md-12 nav-fill  nav-pills" id="myTab" role="tablist">
                   <li class="nav-item">
-                    <a class="nav-link text-light active  " id="tech-tab" data-toggle="tab" href="#Technology" role="tab" aria-controls="tech" aria-selected="true">Technology</a>
+                    <a class="nav-link text-light active  " id="home-tab" data-toggle="tab" href="#Home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light  " id="tech-tab" data-toggle="tab" href="#Technology" role="tab" aria-controls="tech" aria-selected="true">Technology</a>
                   </li>
                   <li class="nav-item ">
                     <a class="nav-link text-light" id="design-tab" data-toggle="tab" href="#design" role="tab" aria-controls="design" aria-selected="false">Design</a>
@@ -44,23 +51,42 @@
                </div>
                 
               </nav>
-<div class="container">
+<div class="">
     <div class="tab-content  " id="myTabContent"  >
-        <div class="tab-pane fade show active" id="Technology" role="tabpanel" aria-labelledby="tech-tab">       <br><br><br>
+        <div class="tab-pane fade " id="Technology" role="tabpanel" aria-labelledby="tech-tab">       <br><br><br>
           <div class="container">
-                <div class="card text-center">
+            <div class="row">
+                <div class="card text-center col-lg-6">
                   <div class="card-header">
                    Overview
                   </div>
-                  <div class="card-body">
+                  <div class="card-body ">
                     <h5 class="card-title">Student at University of North Carolina, Charlotte, NC </h5>
-                    <p class="card-text">I am actively seeking internship in data visualization / AR /VR or Computer Vision software development.</p>
+                    <p class="card-text">I am actively seeking full-time opportunities in Fullstack/ Data Visualization / AR /VR or Computer Vision software development.</p>
                     <button class="btn btn-lg btn-dark" data-bind="click:$root.downloadResume" ><span> Download resume &nbsp;&nbsp;<i class="material-icons">file_download</i></button>
                    
                   </div>
                   
                  
                 </div>
+                <div class="card text-center col-lg-6">
+                    <div class="card-header">
+                     Skills
+                    </div>
+                    <div class="card-body skill-effect ">
+                      <div class= "row" data-bind="foreach: $root.skills" style="cursor: pointer;">
+                      
+                       &nbsp;<p data-bind="text:$data">.Net</p>&nbsp;
+                     
+                      
+                        </div>
+                        
+                    </div>
+                    
+                   
+                  </div>
+              </div>
+               
                 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -84,50 +110,19 @@
                 <hr>
                 <div class="">
                 <div class=" row "  data-bind="foreach: $root.projects">
-                <div class="card text-white bg-info projects mb-3 mx-4 col-md-3 " style="cursor: pointer;" data-bind="click:function(){$root.openModal(id);}" data-toggle="modal"  data-target="#exampleModalCenter">
+                <div class="card bg-info text-white  projects mb-3 mx-4 col-md-3 " data-bind="click: $root.openModal($data.id) "style="cursor: pointer;"  data-toggle="modal"  data-target="#exampleModalCenter">
                   <div class="card-header text-center" data-bind="text: title">Business Portal</div>
-                  <div class="card-body">
-                    <h5 class="card-title" >Technologies used</h5>
+                  <div class="card-body" >
+                    <!--ko if: image!= '' -->
+                      <img class="card-img-top"  data-bind="attr:{src: image}" alt="No image">
+                      <!--/ko -->
                     <p class="card-text" data-bind="text:skills">HTML5, Knockout.Js, Jquery, JavaScript, Bootstrap, .Net, WebApi, WCF, SQL Server</p>
-                  </div>
+                 <div >Details...</div></div>
                 </div>
-                <!-- <div class="card text-white bg-warning projects mb-3 mx-4 col-md-3"data-bind="click:function(){$root.openModal(2);}" data-toggle="modal" data-target="#exampleModalCenter" >
-                  <div class="card-header text-center">Visualization Project</div>
-                  <div class="card-body">
-                    <h5 class="card-title">Data Visualization</h5>
-                    <p class="card-text">Unity 3d, Vuforia, Hololense</p>
-                  </div>
-                </div>
-                <div class="card text-white bg-primary projects mb-3 mx-4 col-md-3" data-bind="click:function(){$root.openModal(3);}" data-toggle="modal" data-target="#exampleModalCenter">
-                  <div class="card-header text-center">Visualization Project</div>
-                  <div class="card-body">
-                    <h5 class="card-title">Architecture Visualization</h5>
-                    <p class="card-text">Unity 3d, Vuforia, android</p>
-                  </div>
-                </div>
-                <div class="card text-white bg-success projects mb-3 mx-4 col-md-3"data-bind="click:function(){$root.openModal(4);}" data-toggle="modal" data-target="#exampleModalCenter" >
-                  <div class="card-header text-center">Machine Vision Project</div>
-                  <div class="card-body">
-                    <h5 class="card-title">Computer/Machine vision</h5>
-                    <p class="card-text">Linux, OpenCV, C++, BeagleBone</p>
-                  </div>
-                </div>
-                <div class="card text-white bg-info projects mb-3 mx-4 col-md-3" data-bind="click:function(){$root.openModal(5);}" data-toggle="modal" data-target="#exampleModalCenter">
-                  <div class="card-header text-center">Telecommunication Project</div>
-                  <div class="card-body">
-                    <h5 class="card-title">Simulation of Dynamic Channel Allocation</h5>
-                    <p class="card-text">MATLAB, GSM Architecture</p>
-                  </div>
-                </div>
-            
-              <div class="card text-white bg-warning projects mb-3 mx-4 col-md-3" data-bind="click:function(){$root.openModal(6);}" data-toggle="modal" data-target="#exampleModalCenter">
-                <div class="card-header text-center">Web Project</div>
-                <div class="card-body">
-                  <h5 class="card-title">Roomies</h5>
-                  <p class="card-text">HTML5, Bootstrap, jQuery, Knockout Js, Node Js, My SQL</p>
-                </div>
-              </div> -->
+              
             </div>
+           
+            
           </div>
               <hr>
                 <div class="col-md-12 text-center">
@@ -143,8 +138,23 @@
             </div>
             
           </div>
+          <div class="tab-pane fade show active" id="Home" role="tabpanel" aria-labelledby="tech-tab">       
          
-        <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design-tab">
+<div id="particles">
+  <div id="webcoderskull">
+    <h2 class="text-light">Hello! I am</h2>
+    <h1 class="text-light font-2 ">Ankit Kelkar</h1>
+    <p class="text-light"></p>
+   
+        <h3 class="text-light"><p href="" class="typewrite" data-period="1000" data-type='[ ".Net Fullstack ", "MEAN Fullstack ", "Augmented Reality","Android" ]'>
+          <span class="wrap"> </span>&nbsp; 
+        </p> Developer</h2>
+      
+  </div>
+</div>
+</div>
+        <div class="tab-pane fade container" id="design" role="tabpanel" aria-labelledby="design-tab">
+          <div class=" ">
          <br>
          <br>
          <br> 
@@ -206,9 +216,9 @@
 
               </div>
 
-        </div>
+        </div></div>
       
-        <div class="tab-pane fade" id="drama" role="tabpanel" aria-labelledby="drama-tab">
+        <div class="tab-pane fade container" id="drama" role="tabpanel" aria-labelledby="drama-tab">
             <br>
             <br>
             <br> 
@@ -230,7 +240,7 @@
            
            
         </div>
-        <div class="tab-pane fade" id="film" role="tabpanel" aria-labelledby="film-tab">
+        <div class="tab-pane fade container" id="film" role="tabpanel" aria-labelledby="film-tab">
             <div class="media">
                 <div class="media-body bgimg bgimgany">
                 <div class="text-center">  <br><br><h3 class="mt-2 mb-1 ">&nbsp; &nbsp; &nbsp; The Pretty Chaos</h3>
@@ -258,7 +268,7 @@
                 <a class="btn btn-danger pull-right" href="https://www.youtube.com/channel/UC_XpxldkfFu1ofJVd-3k_9g"><span class="h5">Visit my YouTube Channel</span>&nbsp;&nbsp;<span><i class="material-icons md-light">&#xE04A;</i></span></a>
                 
         </div>
-        <div class="tab-pane fade" id="me" role="tabpanel" aria-labelledby="me-tab">
+        <div class="tab-pane fade container" id="me" role="tabpanel" aria-labelledby="me-tab">
           <div class="text-center">
             <img  class=" h-75 w-75" src="images/aboutMe.png" alt="..."> 
          
@@ -268,7 +278,9 @@
               <ul class="social-network social-circle ">
                   <li><a href="https://www.facebook.com/ankit.kelkar" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                   <li><a href="https://www.instagram.com/ankitkelkar/" class="icoInstagram" title="Insta"><i class="fa fa-instagram"></i></a></li>
-               
+                  <li><a href="https://github.com/akelkar3" class="icoGitHub" title="Insta"><i class="fa fa-github"></i></a></li>
+
+                
                   <li><a href="https://www.linkedin.com/in/ankitkelkar/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
               </ul>				
            </div>
@@ -289,6 +301,8 @@
     <script src="js/ko.js"  ></script>
 <script src="js/dashboard.js"  ></script>
 <script src="js/toastr.js"  ></script>
+<script src="js/particle.js"  ></script>
+
 <br><br>
 <footer class="text-center">
        

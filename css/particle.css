@@ -1,0 +1,36 @@
+#webcoderskull{
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    padding: 0 20px;
+    width: 100%;
+    text-align: center;
+    
+}
+
+
+canvas{
+    
+    background-image: url('../images/photo.jpg');
+    height:100vh;
+    background-repeat: no-repeat;
+    background-color:rgb(0, 0, 0);
+}
+#webcoderskull h1{
+  letter-spacing: 5px;
+  font-size: 6rem;
+ 
+  font-weight: bold;
+}
+#webcoderskull h2{
+    letter-spacing: 5px;
+    font-size: 4rem;
+   
+  
+  }
+  #webcoderskull h3{
+    letter-spacing: 5px;
+    font-size: 3rem;
+   
+  
+  }
