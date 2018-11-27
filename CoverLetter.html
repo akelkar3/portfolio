@@ -22,8 +22,8 @@
 
   </head>
   <body>
-    <div class="">
-    <form class="form-horizontal">
+    <div class="container">
+    <form class="">
         <fieldset>
         
         <!-- Form Name -->
@@ -83,16 +83,18 @@
           </div>
           <!-- The button used to copy the text --><button class="btn btn-success" data-bind="click:$root.create">Create</button>
 <button class="btn btn-success" data-bind="click:$root.copy">Copy text</button>
-        <!-- Textarea -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="cover">Cover Letter</label>
-          <div class="col-md-4">                     
-           <span id="letter" ></span>
-          </div>
-        </div>
+     
         
         </fieldset>
         </form>
+        <hr/>
+        <br/>
+           <!-- Textarea -->
+          <div class="text-left col-md-6">
+            <div class="">                     
+             <span id="letter" ></span>
+            </div>
+          </div>
       </div>
 
       <script src="js/jquery.js" ></script>

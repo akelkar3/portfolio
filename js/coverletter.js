@@ -35,14 +35,6 @@ self.create= function(){
     $('#letter').append(self.letter ());
 }
 
-
-self.copy = function(){
-    $('#letter').select();
-
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
-
-}
 } 
 
 ko.applyBindings(new ViewModel("Planet", "Earth")); // This makes Knockout get to work
