@@ -1,6 +1,6 @@
 .bgimg {
-	background-image: url('../images/inviteBG.jpg');
-	background-size:60% auto;
+	background-image: url('../images/inviteBG.png');
+	background-size:50% auto;
 	background-repeat: no-repeat;
 	align-items: center;
 }
@@ -11,7 +11,7 @@
 }
 a {
     position:absolute;
-    top:80%;
+    top:50%;
     left:80%;
     transform:translate(-50%,-50%);
     width:200px;
