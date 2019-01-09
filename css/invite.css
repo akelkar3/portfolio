@@ -1,3 +1,4 @@
+
 .bgimg {
 	background-image: url('../images/inviteBG.png');
 	background-size:50% auto;
@@ -7,9 +8,15 @@
 .fontA{
 	font-family: 'Italianno', cursive;
 	font-size: 4rem;
-	-webkit-text-fill-color: #e6b800;
+    -webkit-text-fill-color: #e6b800;
 }
-a {
+.fontB{
+	
+    font-family: 'Great Vibes', cursive;
+    font-weight:100;
+
+}
+/*a {
     position:absolute;
     top:50%;
     left:80%;
@@ -49,4 +56,71 @@ a span:nth-child(2) {
 a:hover span:nth-child(2) {
     transform: translateX(100%);
     color:#eccf00;
-}
+} */
+
+    .top {
+      background-color: #264356;
+      height: 200px;
+      margin:0;
+      padding:0;
+      box-shadow: 2px 2px 4px rgb(0, 0, 0, .25);
+    }
+    
+    .form {
+      height: 590px;
+      width: 400px;
+      background-color: rgb(236, 247, 248);
+      margin: -110px auto;
+      border-radius: 10px;
+      color: #666;
+      padding: 0px 0px;
+      box-shadow: 2px 2px 4px rgb(0, 0, 0, .25);
+    }
+    
+    
+    h1, h2, p {
+      text-align: center;
+      padding: 0px;
+     
+    }
+    
+  
+    
+    input:focus {
+      outline: 0;
+    }
+    
+    .button button {
+      display: inline-block;
+      width: 400px;
+    }
+    button {
+      color: #666;
+      background-color: #ffbdc7;
+      border: none;
+      font-family: 'Raleway';
+      font-size: 18px;
+      font-weight: 600;
+      padding: 15px 32px;
+      width: 200px;
+      margin: 20px auto 0px auto; 
+      float:left;
+    }
+    
+    button.accept {
+      border-radius: 0px 0px 0px 10px;
+      border-right: solid 1px #cc919a;
+    }
+    
+    button.regret {
+      border-radius: 0px 0px 10px 0px;
+    }
+    
+    button:hover {
+      background-color: #cc919a;
+      transition: .5s;
+    }
+    
+    button:focus {
+      outline: 0;
+    }
